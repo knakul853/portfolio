@@ -5,12 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf out/",
     "predeploy": "npm run clean && npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles --branch gh-pages",
     "serve": "http-server out -p 3000 --cors -c-1"
   },
   "dependencies": {
