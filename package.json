@@ -5,11 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "clean": "rm -rf out/",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "serve": "http-server out -p 3000 --cors -c-1"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -30,7 +32,9 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "gh-pages": "^6.2.0",
+    "http-server": "^14.1.1",
     "postcss": "^8",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

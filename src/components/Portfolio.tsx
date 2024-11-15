@@ -86,10 +86,10 @@ const Portfolio = () => {
     <CardContent className="p-6">
         <div className="aspect-square overflow-hidden rounded-lg">
             <Image 
-                src="/profile.png" // This path points to public/profile.png
+                src={process.env.NODE_ENV === 'production' ? '/portfolio/profile.png' : '/profile.png'}
                 alt="Nakul Bharti"
-                width={500}         // Specify width
-                height={500}        // Specify height
+                width={500}
+                height={500}
                 className="object-cover"
             />
         </div>

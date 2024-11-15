@@ -1,19 +1,19 @@
 const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio" : "";
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
-    remotePatterns: [],
+    domains: ['localhost'],
+    path: `${basePath}/_next/image`
   },
-  assetPrefix: isProd ? "/portfolio/" : "",
-  basePath: isProd ? "/portfolio" : "",
+  assetPrefix: basePath,
+  basePath: basePath,
   output: "export",
   trailingSlash: true,
-  // Handle hydration errors by suppressing specific warnings
-  onDemandEntries: {
-    // This will help reduce client/server mismatches
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
+  compress: false
 };
+
+module.exports = nextConfig;
