@@ -19,7 +19,7 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Mobile Application Developer (Contractor)",
+      title: "Software Engineer (Contractor)",
       company: "Global Satellite Engineering",
       companyUrl: "https://gsat.us",
       period: "2021 - 2024",
