@@ -66,6 +66,27 @@ const Portfolio = () => {
     }
   ];
 
+  const projects = [
+    {
+      title: "Spendulam, Expense Tracker",
+      url: "https://play.google.com/store/apps/details?id=com.spendulam.budgettracker",
+      highlights: [
+        "Built full-stack Flutter expense tracking application supporting multi-currency transactions across multiple accounts.",
+        "Implemented real-time financial analytics with interactive charts, processing years of transaction history with sub-second response time.",
+        "Designed scalable architecture supporting: Multi-account management with automatic balance reconciliation, Custom budget tracking across 10+ expense categories, Real-time statistical analysis and reporting, Cross-platform deployment with 99.9% code sharing between iOS and Android."
+      ]
+    },
+    {
+      title: "Matching game",
+      url: "https://github.com/knakul853/matching-game",
+      highlights: [
+        "3 game modes (easy, medium, hard) with 3 difficulty levels: from 4x2 up to 6x4 cards.",
+        "Card packs with funny cats, food, fruits and vegetables, flags, shapes, letters, music, sport, attractions, and numbers.",
+        "Simple and easy-to-master interface with track of your best score."
+      ]
+    }
+  ];
+
   const awards = [
     {
       title: "Google Summer of Code 2020",
@@ -185,6 +206,29 @@ const Portfolio = () => {
                       </div>
                       <ul className="list-disc list-inside space-y-2 text-gray-600">
                         {exp.highlights.map((highlight, i) => (
+                          <li key={i} className="text-sm">{highlight}</li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Projects Section */}
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold mb-4">Projects</h2>
+              <div className="space-y-6">
+                {projects.map((project, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="mb-2">
+                        <a href={project.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-lg text-blue-600 hover:text-blue-800">
+                          {project.title}
+                        </a>
+                      </div>
+                      <ul className="list-disc list-inside space-y-2 text-gray-600">
+                        {project.highlights.map((highlight, i) => (
                           <li key={i} className="text-sm">{highlight}</li>
                         ))}
                       </ul>
