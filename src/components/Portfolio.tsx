@@ -197,12 +197,14 @@ const Portfolio = () => {
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h3 className="font-semibold text-lg">{exp.title}</h3>
-                          <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                            {exp.company}
-                          </a>
+                          <h3 className="font-semibold text-lg">
+                            <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-blue-800">
+                              {exp.company}
+                            </a>
+                          </h3>
+                          <p className="text-gray-600 text-sm italic">{exp.title}</p>
                         </div>
-                        <span className="text-gray-600">{exp.period}</span>
+                        <span className="text-gray-500 italic">{exp.period}</span>
                       </div>
                       <ul className="list-disc list-inside space-y-2 text-gray-600">
                         {exp.highlights.map((highlight, i) => (
