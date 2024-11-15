@@ -32,8 +32,8 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Google Summer of Code (GSoC) Developer",
-      company: "MZmine Project, Google",
+      title: "Intern",
+      company: "Google Summer of Code (GSoC) | MZmine Project, Google",
       companyUrl: "https://summerofcode.withgoogle.com/",
       period: "May 2020 - Aug 2020",
       highlights: [
@@ -44,8 +44,8 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Google Summer of Code Intern",
-      company: "INCF, Google",
+      title: "Intern",
+      company: "Google summer of code (INCF)",
       companyUrl: "https://summerofcode.withgoogle.com/",
       period: "May 2019 - Aug 2019",
       highlights: [
