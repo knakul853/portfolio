@@ -1,8 +1,11 @@
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports = {
-  output: "export",
+  reactStrictMode: true,
   images: {
-    unoptimized: true, // disables Image Optimization for GitHub Pages compatibility
+    unoptimized: true, // Disable default image optimization
   },
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio/",
+  assetPrefix: isProd ? "/portfolio/" : "",
+  basePath: isProd ? "/portfolio" : "",
+  output: "export",
 };
