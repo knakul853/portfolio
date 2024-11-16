@@ -68,21 +68,22 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "AccessMesh - Enterprise-Grade Access Control System",
+      url: "https://github.com/knakul853/AccessMesh",
+      highlights: [
+        "Architected scalable RBAC system in Go/MongoDB, featuring dynamic policy management and context-aware authorization for enhanced security",
+        "Engineered secure authentication with JWT integration and email verification, ensuring robust identity management and security compliance",
+        "Developed high-performance API with rate limiting and audit logging, processing 1000+ policy evaluations/second",
+        "Created responsive admin dashboard using Next.js/TypeScript/Material-UI for real-time policy management"
+      ]
+    },
+    {
       title: "Spendulam, Expense Tracker",
       url: "https://play.google.com/store/apps/details?id=com.spendulam.budgettracker",
       highlights: [
         "Built full-stack Flutter expense tracking application supporting multi-currency transactions across multiple accounts.",
         "Implemented real-time financial analytics with interactive charts, processing years of transaction history with sub-second response time.",
         "Designed scalable architecture supporting: Multi-account management with automatic balance reconciliation, Custom budget tracking across 10+ expense categories, Real-time statistical analysis and reporting, Cross-platform deployment with 99.9% code sharing between iOS and Android."
-      ]
-    },
-    {
-      title: "Matching game",
-      url: "https://github.com/knakul853/matching-game",
-      highlights: [
-        "3 game modes (easy, medium, hard) with 3 difficulty levels: from 4x2 up to 6x4 cards.",
-        "Card packs with funny cats, food, fruits and vegetables, flags, shapes, letters, music, sport, attractions, and numbers.",
-        "Simple and easy-to-master interface with track of your best score."
       ]
     }
   ];
